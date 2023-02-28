@@ -12,179 +12,289 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Lempac</title>
+    <style>
+        body {
+            background-color: rgb(238, 238, 238);
+            --title-color: rgb(34, 34, 34);
+            --text-color: rgb(65, 65, 65);
+            font-family: sans-serif;
+        }
+
+        /* Header */
+        header .navbar-nav .nav-item .nav-link:hover,
+        .navbar-nav .nav-item .nav-link:active,
+        .navbar-nav .nav-item .nav-link:focus,
+        .navbar-brand:hover,
+        .navbar-brand:active,
+        .navbar-brand:focus {
+            background-color: var(--bs-gray-dark);
+        }
+
+        header .navbar-brand {
+            font-size: 1rem;
+        }
+
+        header .navbar-toggler-icon i {
+            color: white;
+            font-size: 1.3em;
+            width: auto;
+            height: auto;
+        }
+
+        header nav .navbar-collapse .navbar-nav:first-of-type {
+            width: 100%;
+        }
+
+        header .navbar-nav span {
+            margin-right: 20px;
+        }
+
+        .navbar-toggler,
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0;
+        }
+
+        @media (max-width: 576px) {
+            header nav .navbar-collapse .navbar-nav:last-of-type {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (min-width: 576px) {
+            header .navbar-nav span {
+                display: none;
+            }
+        }
+        /* Header - End */
+
+        /* Main */
+
+        main {
+            margin-top: 70px;
+        }
+
+        .features .feature {
+            margin: 60px 0 0 0;
+        }
+
+        .features .feature section {
+            /* background-color: var(--bs-gray-dark); */
+            /* background-color: rgb(243, 243, 243); */
+            border-radius: 37px;
+            background: #f3f3f3;
+            box-shadow:  11px 11px 22px #e1e1e1,
+                        -11px -11px 22px #f8f8f8;
+
+        }
+
+        .features .feature img {
+            border: 10px solid #f5f5f5;
+            transform: translateX(-30px);
+            display: block;
+            border-radius: 37px;
+            background: #f2f2f2;
+            box-shadow:  11px 11px 22px #e1e1e1,
+                        -11px -11px 22px #ffffff;
+        }
+
+        .features .feature p {
+            margin-right: 40px;
+        }
+
+        .presentations {
+            margin: 50px 0 0 0;
+        }
+
+        .presentations > div{
+            background-color: var(--bs-gray-dark);
+            border-radius: 10px;
+            /* color: white; */
+            padding: 70px !important;
+        }
+
+        @media (max-width: 768px) {
+
+            .call-us {
+                justify-content: center;
+            }
+            .call-us > div {
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            .call-us > div img {
+                width: 300px;
+            }
+
+            .call-us > div > div {
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+            }
+
+            .feature {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .buttons > div {
+                flex-direction: column;
+            }
+
+            .buttons > div button {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .presentations .presentation {
+                align-items: center;
+                flex-direction: column !important;
+            }
+
+            .presentations .presentation img {
+                margin-bottom: 40px;
+            }
+        }
+        /* Main - End */
+    </style>
 </head>
 <body>
-    <header class="container-fluid bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light container navbar-fixed-top">
-            <a class="navbar-brand" href="#">
-                <img src="./img/LOGO_LEMPAC.webp" width="70" height="70" alt="Lempac">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0 ">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Lorem ipsum
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Obcaecati
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Soluta reiciendis
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Consequuntur ex
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Accusamus
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a href="#" class="dropdown-item">Odio eligendi</a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">Quos vero</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Met consectetur
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Reprehenderit
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Adipisci
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
-                            Corporis
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
-                            Optio numquam
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
-                            Provident
-                        </a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar fixed-top container-fluid bg-dark p-0 navbar-expand-sm navbar-d">
+            <div class="container">
+                <a class="navbar-brand text-light p-3 m-0" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon">
+                    <i class="bi bi-list fill-white"></i>
+                  </span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light p-3" href="#">Packaging</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light p-3" href="#">Labels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light p-3" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link text-light p-3" href="#"><span>Account</span><i class="bi bi-person-circle"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="container-sm">
-            <h1 class="text-center mt-5">
-                Lorem ipsum
-            </h1>
-            <p class="text-center mt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nobis voluptate aperiam sunt deserunt eligendi voluptas reprehenderit? Totam rerum, autem perferendis animi debitis harum temporibus suscipit ea quos vero molestias provident odio eligendi, laborum repellendus eaque, adipisci a optio numquam.
-            </p>
-        </div>
-        <div id="carouselIndicators" class="carousel slide mt-5">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img focusable="false" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="https://picsum.photos/1600/500" alt="Image 0">
-              </div>
-              <div class="carousel-item">
-                <img focusable="false" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="https://picsum.photos/1600/499" alt="Image 1">
-              </div>
-              <div class="carousel-item">
-                <img focusable="false" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="https://picsum.photos/1599/500" alt="Image 2">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        <div class="container mt-5 d-flex">
-            <div class="w-100 p-3 overflow-hidden d-flex justify-content-center">
-                <img class="float-left center-block d-block mx-auto" src="https://picsum.photos/800" alt="Image">
-            </div>
-            <div class="w-100 p-3">
-                <h1 class="p-5 m-0">
-                    Lorem ipsum dolor sit amet.
+        <div class="container-fluid mt-5">
+            <section class="container p-3">
+                <h1>
+                    Custom Branded Packaging
                 </h1>
-                <p class="p-5 m-0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati, deleniti repellat accusantium consectetur vero mollitia est pariatur, ullam perferendis ex vel id architecto omnis voluptatibus. Veniam iste asperiores debitis, laborum voluptates magnam, distinctio, nostrum dolor numquam at ipsam.
-                    <br><br>
-                    Earum possimus accusamus itaque error quis molestias vero adipisci distinctio minus sint, quidem veritatis soluta, iste magni laboriosam vitae, ea veniam placeat eum expedita? Consequatur, iste tenetur mollitia odio quas deleniti? Quo eum ullam ipsa! Quis, qui deserunt consectetur assumenda nesciunt magnam maiores facere pariatur quibusdam expedita nobis distinctio, non repellat ipsam reprehenderit eius officiis. 
-                    <br><br>
-                    Consequatur deleniti voluptates nulla sunt expedita.
+                <p class="mt-3">
+                    From cosmetics to large UK retailers, Lempak supplies exceptional labels and packaging using the latest printing technology. Our design services support your business every step of the way, from concept to sample and beyond
                 </p>
-                <div class="w-100 px-5 m-0">
-                    <button type="button" class="btn btn-primary ">Lorem, ipsum dolor.</button>
+            </section>
+        </div>
+        <div class="container-fluid mt-4 call-us d-flex justify-content-center align-items-center">
+            <div class="container d-flex">
+                <img src="https://picsum.photos/400/400" width="300" height="300" class="img-fluid rounded-circle" alt="Responsive image">
+                <div class="d-flex justify-content-center align-items-center p-5">
+                    <button type="button" class="btn btn-primary px-5 mx-5">Call Us</button>
                 </div>
             </div>
         </div>
-        <div class="container mt-5">
-            <div class="embla">
-                <div class="embla__container">
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/200/100" alt="Image">
-                    </div>
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/200/99" alt="Image">
-                    </div>
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/199/100" alt="Image">
-                    </div>
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/199/99" alt="Image">
-                    </div>
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/199/101" alt="Image">
-                    </div>
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/201/101" alt="Image">
-                    </div>
-                    <div class="embla__slide mx-3">
-                        <img src="https://picsum.photos/201/99" alt="Image">
+        <div class="container-fluid mt-3 features">
+            <div class="container pt-5">
+                <div class="d-flex justify-content-between align-items-center feature">
+                    <section class="p-5 w-100">
+                        <h1 class="mb-4 text-dark">
+                            Printing Technology
+                        </h1>
+                        <p class="text-dark">
+                            We offer pre-printing, cutting, lamination, gluing and off-set printing using advanced machinery to deliver the highest qualy cardboard packaging and labels.
+                        </p>
+                    </section>
+                    <div>
+                        <img src="https://picsum.photos/200/200" width="200" height="200" class="rounded-circle" alt="Responsive image">
                     </div>
                 </div>
-            </div>              
+                <div class="d-flex justify-content-between align-items-center feature">
+                    <section class="p-5 w-100">
+                        <h1 class="mb-4 text-dark">
+                            Bespoke Packaging
+                        </h1>
+                        <p class="text-dark">
+                            Our cardboard bozed are product with hight resolution offset printing. This ensures rich colour options for glued, acetate, windowed boxes, embossed, foiled, glossy or matt, cellophane and perforated boxed. We also offer separators, carrying handles and other elements.
+                        </p>
+                    </section>
+                    <img src="https://picsum.photos/200/201" width="200" height="200" class="rounded-circle" alt="Responsive image">
+                </div>
+                <div class="d-flex justify-content-between align-items-center feature">
+                    <section class="p-5 w-100">
+                        <h1 class="mb-4 text-dark">
+                            Product Labelling
+                        </h1>
+                        <p class="text-dark">
+                            Create eye-catching, durable labels for food and beverage products, including quantity, size, price, ingredients, manufacturing and purpose.
+                        </p>
+                    </section>
+                    <img src="https://picsum.photos/201/201" width="200" height="200" class="rounded-circle" alt="Responsive image">
+                </div>
+            </div>
         </div>
-        <div class="mt-5"></div>
+        <div class="buttons container-fluid mt-3">
+            <div class="container pt-5 d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary px-5 py-2 mx-5">Services</button>
+                <button type="button" class="btn btn-primary px-5 py-2 mx-5">Pricing</button>
+                <button type="button" class="btn btn-primary px-5 py-2 mx-5">FAQs</button>
+            </div>
+        </div>
+        <div class="container-fluid mt-3 presentations">
+            <div class="container pt-5">
+                <div class="d-flex justify-content-between presentation">
+                    <img src="https://picsum.photos/201/200" width="200" height="200" class="rounded-circle" alt="Responsive image">
+                    <section class="mb-5">
+                        <h1 class="mb-4">
+                            Our story
+                        </h1>
+                        <p>
+                            Lempac is the sister company of Envelopes Ltd.
+                            With over 20 year of experience in the envelope and packaging industry, our company continues to diversify to meet our client's ever-increasing demand for bespoke packaging.
+                            <br>
+                            <br>
+                            Our mission is simple. We aim to be the direct channel between our customer's requeriments, from conecpt and design to manufacturing, ensuring ht eefficient delivery of eye-catching products.
+                        </p>
+                    </section>
+                </div>
+                <div class="d-flex justify-content-between presentation">
+                    <img src="https://picsum.photos/201/202" width="200" height="200" class="rounded-circle" alt="Responsive image">
+                    <section class="mb-5">
+                        <h1 class="mb-4">
+                            Our approach
+                        </h1>
+                        <p>
+                            We manage time-sensitive schedules. It begins with developing basic design concepts. Next, we arrange pre-production samples, liaising with clients throughout the process to make design changes before the final sign-off. Finally, we carry out continuous quality checks for extra peace of mind.
+                            <br>
+                            <br>
+                            With manufacturing facilities in the UK, alongside partners in Europe, Lempac offers higlhly competitive pricing for large projects. Our clients can begin a project with a shor-run luxry design, scaling the project up to accommodate high-volumne production. We work closely with our partners and supervise output to ensure all standars are met and finished to a high standard.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
     </main>
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-
-    <script type="text/javascript">
-        EmblaCarousel(document.querySelector('.embla'), { loop: true, dragFree: true, startIndex: 3 });
-    </script>
-      
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
