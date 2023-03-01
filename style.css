@@ -75,12 +75,13 @@ main {
 }
 
 .features .feature section {
-    border-radius: 0px 20px 20px 0;
+    border-radius: 10px;
     background: rgb(238,238,238);
     box-shadow:  10px 0px 10px #d3d3d35d,
                  3px 0px 10px #d3d3d334,
                  0px 5px 20px #d3d3d315,
                  0px -5px 20px #d3d3d315,
+                 -10px 0 20px #d3d3d363,
                  inset -5px -30px 40px rgba(245, 245, 245, 0.7),
                  -10px 0px 35px rgba(255, 255, 255, 0.658);
 
@@ -100,6 +101,7 @@ main {
                  1px 0px 5px #d3d3d334,
                  0px 3px 5px #d3d3d315,
                  0px -3px 10px #d3d3d315,
+                 -10px 0 5px #d3d3d341,
                  inset -3px -15px 40px rgba(245, 245, 245, 0.4),
                  -5px 0px 35px rgba(255, 255, 255, 0.5);
     border-top: 1px solid transparent;
@@ -152,7 +154,7 @@ main {
     font-weight: bolder;
     font-size: 3em;
     color: white;
-    text-align: center;
+    /* text-align: center; */
     letter-spacing: 3px;
 }
 
@@ -168,7 +170,193 @@ main {
     background-color: var(--bs-gray-dark);
     border-radius: 10px;
     /* color: white; */
-    padding: 70px !important;
+    /* padding: 70px !important; */
+}
+
+.buttons > div {
+    /* margin: 100px 0px 0px 0; */
+    padding: 120px 0 100px 0px;
+}
+
+
+.envelope-button {
+    width: 200px;
+    border: 1px solid rgba(109, 71, 39, 0.205);    
+    border-top: 0;
+    height: 125px;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    /* background-color: blueviolet; */
+    z-index: 0;
+
+    background-image: url(./img/kraftreciclado_recortado.webp);
+    background-position: center;
+
+    box-shadow: inset 20px 0 10px rgba(134, 100, 36, 0.2);
+    border-radius: 0px 0 5px 5px;
+}
+
+.envelope-button:hover {
+    cursor: pointer;
+}
+
+.envelope-button > div {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.envelope-button > div > div {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.envelope-button > div > div > div {
+    box-sizing: border-box;
+}
+
+.envelope-button .envelope-top {
+    /* border: 1px solid red; */
+    position: absolute;
+    height: 100px;
+    width: inherit;
+    box-sizing: border-box;
+    transform: translateY(-100px) translateX(-1px) skew(0deg, 0deg);
+    /* background-color: red; */
+    z-index: -1;
+    overflow: hidden;
+}
+
+.envelope-button .envelope-top > div {
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 0;
+    background-color:yellowgreen;
+    /* box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.308); */
+    border: 1px solid rgba(109, 71, 39, 0.205);    
+
+    width: 150px;
+    height: 150px;
+
+    transform: rotateZ(45deg) translateX(2px) translateY(5px) translateX(38px);
+
+    background-image: url(./img/kraftreciclado_recortado.webp);
+    background-position: center;
+}
+
+.envelope-button .envelope-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 125px;
+    height: 125px;
+
+    box-shadow: -5px 7px 15px rgb(0, 0, 0);
+    border: 1px solid rgba(109, 71, 39, 0.205);    
+    border-radius: 0 10px 0 0;
+
+    transform: rotateZ(45deg) translate3d(-50px, 50px, 10px) skew(-15deg, -12deg);
+    transform-origin: center;
+
+    background-image: url(./img/kraftreciclado_recortado.webp);
+    background-position: center;
+}
+
+.envelope-button .envelope-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 125px;
+    height: 125px;
+
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.308);
+    border: 1px solid rgba(109, 71, 39, 0.205);
+    border-radius: 0 0px 0 10px;
+    background-color: rgb(11, 252, 171);
+
+    transform: rotateZ(45deg) translate3d(50px, -50px, 10px) skew(-12deg, -15deg);
+    transform-origin: center;
+
+    background-image: url(./img/kraftreciclado_recortado.webp);
+    background-position: center;
+}
+
+.envelope-button .envelope-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 150px;
+    height: 150px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.308);
+
+    border: 1px solid rgba(109, 71, 39, 0.205);
+    background-color: rgb(255, 228, 196);
+    border-radius: 10px 0 0 0;
+    transform: rotateZ(45deg) translate3d(60px, 25px, 0px) skew(-5deg, -5deg);
+    background-image: url(./img/kraftreciclado_recortado.webp);
+    background-position: center;
+}
+
+.envelope-button .envelope-content {
+    position: absolute;
+    width: inherit;
+    box-sizing: border-box;
+    height: 125px;
+
+    padding: 10px;
+    z-index: -1;
+
+    transition-duration: 400ms;
+    transform: translateY(-80px);
+}
+
+.envelope-button:hover .envelope-content {
+    transform: translateY(-30px);
+}
+
+.envelope-button .envelope-content > div {
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(109, 71, 39, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* text-transform: uppercase; */
+    font-size: 1.4rem;
+    /* background-color: white; */
+
+    background-image: url(./img/papel-recortado.webp);
+    background-color: white;
+    background-position: center;
+
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    transition-duration: 1s;
+}
+
+.envelope-button:hover .envelope-content > div {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0);
+}
+
+.envelope-button .envelope-content h3 {
+    opacity: .8;
+    font-weight: bolder;
+}
+
+.envelope-button:not(:last-of-type) {
+    margin-right: 50px;
+}
+
+.envelope-button {
+    margin: 80px 0 30px 0;
 }
 
 @media (max-width: 768px) {
@@ -202,11 +390,6 @@ main {
 
     .buttons > div {
         flex-direction: column;
-    }
-
-    .buttons > div button {
-        width: 100%;
-        margin: 20px 0;
     }
 }
 
