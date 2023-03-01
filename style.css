@@ -75,13 +75,12 @@ main {
 }
 
 .features .feature section {
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 0;
     background: rgb(238,238,238);
     box-shadow:  10px 0px 10px #d3d3d35d,
                  3px 0px 10px #d3d3d334,
                  0px 5px 20px #d3d3d315,
                  0px -5px 20px #d3d3d315,
-                 -5px 0px 20px #00000015,
                  inset -5px -30px 40px rgba(245, 245, 245, 0.7),
                  -10px 0px 35px rgba(255, 255, 255, 0.658);
 
@@ -101,7 +100,6 @@ main {
                  1px 0px 5px #d3d3d334,
                  0px 3px 5px #d3d3d315,
                  0px -3px 10px #d3d3d315,
-                 -3px 0px 5px #00000015,
                  inset -3px -15px 40px rgba(245, 245, 245, 0.4),
                  -5px 0px 35px rgba(255, 255, 255, 0.5);
     border-top: 1px solid transparent;
@@ -133,7 +131,7 @@ main {
     display: block;
     border-radius: 37px;
     background: #f2f2f2;
-    box-shadow:  5px 0px 10px #d3d3d327,
+    box-shadow: 5px 0px 10px #d3d3d327,
                 0px -1px 0px #ffffff,
                 5px -2px 10px #d3d3d393,
                 5px 5px 10px rgb(224, 224, 224);
