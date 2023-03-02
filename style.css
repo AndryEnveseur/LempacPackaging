@@ -58,128 +58,74 @@ main {
     margin-top: 100px;
 }
 
-.lempac-presentation .envelope-button {
-    margin-top: 150px;
-}
-
-.lempac-presentation .envelope-button .envelope-content > div{
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    border: none;
-}
-
-.lempac-presentation .envelope-button:hover .envelope-content svg {
-    animation: shake-animation 2s infinite;
-}
-
-.lempac-presentation .envelope-button .envelope-content svg {
-    width: 80px;
-    height: auto;
-    fill: white;
-
-}
-
-.lempac-presentation .envelope-button .envelope-content {
-    transform: translateY(-30px);
-
-}
-
-.lempac-presentation .envelope-button:hover .envelope-content {
-    transform: translateY(-80px);
-
-}
-
-@keyframes shake-animation {
-    0% { transform:translate(0,0) }
-   5% { transform:translate(10px,0) }
-   10% { transform:translate(0,0) }
-   15% { transform:translate(10px,0) }
-   20% { transform:translate(0,0) }
-   25% { transform:translate(10px,0) }
-   30% { transform:translate(0,0) }
-   100% { transform:translate(0,0) }
- }
-
 .features .feature {
     margin: 60px 0 0 0;
 }
 
-.features .feature section {
-    border-radius: 10px;
-    background: rgb(238,238,238);
-    box-shadow:  10px 0px 10px #d3d3d35d,
-                 3px 0px 10px #d3d3d334,
-                 0px 5px 20px #d3d3d315,
-                 0px -5px 20px #d3d3d315,
-                 -10px 0 20px #d3d3d363,
-                 inset -5px -30px 40px rgba(255, 255, 255, 0.3),
-                 -10px 0px 35px rgba(255, 255, 255, .4);
-
-    transform: translateX(30px);
-    margin-left: -30px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    border-left: 1px solid rgba(255, 255, 255, .7);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-    transition-duration: 400ms;
-    transition-property: box-shadow, border;
+.features .feature {
+    padding-bottom: 40px;
 }
 
-.features .feature:hover section {
-    box-shadow:  5px 0px 5px #d3d3d35d,
-                 1px 0px 5px #d3d3d334,
-                 0px 3px 5px #d3d3d315,
-                 0px -3px 10px #d3d3d315,
-                 -10px 0 5px #d3d3d341,
-                 inset -3px -15px 40px rgba(245, 245, 245, 0.4),
-                 -5px 0px 35px rgba(255, 255, 255, 0.5);
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-left: 1px solid rgba(255, 255, 255, .6);
-}
-
-.features .feature img {
-    border: 15px solid rgb(236, 236, 236);
-    position: relative;
-    z-index: 99;
-    display: block;
-    border-radius: 37px;
-    background: #f2f2f2;
-    box-shadow: 5px 0px 10px #d3d3d327,
-                0px -1px 0px #ffffff,
-                5px -2px 10px #d3d3d393,
-                5px 5px 10px rgb(224, 224, 224);
-
-    transition-duration: 400ms;
-    transition-property: box-shadow, transform;
-}
-
-.features .feature:hover img {
-    box-shadow: 3px 0px 5px #d3d3d327,
-                0px 0px 0px #ffffff,
-                3px -1px 5px #d3d3d393,
-                3px 3px 5px rgb(224, 224, 224);
-    transform: scale3d(.995, .995, .995);
-}
-
-.features .feature h1 {
+section h1 {
     font-weight: bolder;
-    font-size: 3em;
-    color: white;
     letter-spacing: 3px;
+    font-size: 3em;
 }
 
-.features .feature p {
-    margin-right: 40px;
+h1 {
+    font-size: 5rem;
+    line-height: 1;
+    /* max-inline-size: 15ch; */
+
+    --shadow-color: hsl(0, 0%, 87%);
+    --shadow-color-inverted: rgb(255, 255, 255);
+    text-shadow: 
+                .01em .01em 0 var(--shadow-color),
+                .02em .02em 0 var(--shadow-color),
+                .03em .03em 0 var(--shadow-color),
+                .04em .04em 0 var(--shadow-color),
+                .05em .05em 0 var(--shadow-color),
+                .06em .06em 0 var(--shadow-color),  
+                .07em .07em 0 var(--shadow-color),
+                .08em .08em 0 var(--shadow-color),
+                .09em .09em 0 var(--shadow-color),
+                .1em .1em 0 var(--shadow-color),
+                .11em .11em 0 var(--shadow-color),
+                .12em .12em 0 var(--shadow-color),
+                .13em .13em 0 var(--shadow-color),
+                .14em .14em 0 var(--shadow-color),
+                .15em .15em 0 var(--shadow-color),
+                .16em .16em 0 var(--shadow-color),
+                .17em .17em 0 var(--shadow-color),
+                -.01em -.01em 0 var(--shadow-color-inverted),
+                -.02em -.02em 0 var(--shadow-color-inverted),
+                -.03em -.03em 0 var(--shadow-color-inverted);
+}
+
+p {
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.features hr {
+    background: rgb(173, 173, 173);
+}
+
+.features .feature div img {
+    width: 267px;
+    height: auto;
+
+    border-radius: 10px;
+    -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
+    -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    box-shadow: 5px 5px 3px rgba(182, 182, 182, 0.75);
 }
 
 .presentations {
     margin: 50px 0 0 0;
 }
 
-.presentations > div{
+.presentations > div {
     background-color: var(--bs-gray-dark);
     border-radius: 10px;
 }
@@ -187,7 +133,6 @@ main {
 .buttons > div {
     padding: 120px 0 100px 0px;
 }
-
 
 .envelope-button {
     width: 200px;
