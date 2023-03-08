@@ -5,10 +5,263 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        .envelope-button {
+            width: 200px;
+            border: 1px solid rgba(109, 71, 39, 0.205);    
+            border-top: 0;
+            height: 125px;
+            overflow: hidden;
+
+            box-sizing: border-box;
+            z-index: 0;
+
+            background-image: url(./img/kraftreciclado_recortado.webp);
+            background-position: center;
+
+            box-shadow: inset 20px 0 10px rgba(134, 100, 36, 0.2),
+                        5px 20px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 0px 0 5px 5px;
+            border: 0;
+            padding: 0;
+        }
+
+        .envelope-button > div {
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .envelope-button > div > div {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .envelope-button > div > div > div {
+            box-sizing: border-box;
+        }
+
+        .envelope-button .envelope-top {
+            position: absolute;
+            height: 100px;
+            width: inherit;
+            box-sizing: border-box;
+            transform: translateY(-100px) translateX(-1px) skew(0deg, 0deg);
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .envelope-button .envelope-top > div {
+            box-sizing: border-box;
+            border-radius: 10px 0 0 0;
+            border: 1px solid rgba(109, 71, 39, 0.205);    
+
+            width: 150px;
+            height: 150px;
+
+            transform: rotateZ(44.5deg) translateX(2px) translateY(5px) translateX(38px);
+
+            background-image: url(./img/kraftreciclado_recortado.webp);
+            background-position: center;
+        }
+
+        .envelope-button .envelope-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 125px;
+            height: 125px;
+
+            box-shadow: 5px 10px 15px rgb(0, 0, 0);
+            border: 1px solid rgba(109, 71, 39, 0.205);    
+            border-radius: 0 10px 0 0;
+
+            transform: rotateZ(45deg) translate3d(-50px, 50px, 10px) skew(-15deg, -12deg);
+            transform-origin: center;
+
+            background-image: url(./img/kraftreciclado_recortado.webp);
+            background-position: center;
+        }
+
+        .envelope-button .envelope-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 125px;
+            height: 125px;
+
+            box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.308);
+            border: 1px solid rgba(109, 71, 39, 0.205);
+            border-radius: 0 0px 0 10px;
+
+            transform: rotateZ(45deg) translate3d(50px, -50px, 10px) skew(-12deg, -15deg);
+            transform-origin: center;
+
+            background-image: url(./img/kraftreciclado_recortado.webp);
+            background-position: center;
+        }
+
+        .envelope-button .envelope-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 150px;
+            height: 150px;
+            box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.308);
+
+            border: 1px solid rgba(109, 71, 39, 0.205);
+            border-radius: 10px 0 0 0;
+            transform: rotateZ(45deg) translate3d(60px, 25px, 0px) skew(-5deg, -5deg);
+            background-image: url(./img/kraftreciclado_recortado.webp);
+            background-position: center;
+        }
+
+        .envelope-button .envelope-content {
+            position: absolute;
+            width: inherit;
+            box-sizing: border-box;
+            height: 125px;
+
+            padding: 10px;
+            z-index: -1;
+
+            transition-duration: 400ms;
+        }
+
+        .page-loaded {
+            transform: translateY(-80px);
+        }
+
+        a:hover ~ .envelope-button .envelope-content, 
+        a:active ~ .envelope-button .envelope-content,
+        a:focus ~ .envelope-button .envelope-content {
+            transform: translateY(-30px);
+        }
+
+        .envelope-button .envelope-content > div {
+            display: grid;
+            place-items: center;
+
+            border: 1px solid rgba(109, 71, 39, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            height: 100%;
+
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 1.4rem;
+
+            background-image: url(./img/papel-recortado.webp);
+            background-position: center;
+
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+            transition-duration: 1s;
+        }
+
+        a:hover ~ .envelope-button .envelope-content > div,
+        a:active ~ .envelope-button .envelope-content > div,
+        a:focus ~ .envelope-button .envelope-content > div {
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0);
+        }
+
+        .envelope-button .envelope-content h3 {
+            opacity: .6;
+            font-weight: bolder;
+            margin: 10px 0 0 0;
+            font-size: 2.5em;
+        }
+
+        .envelope-button {
+            margin: 80px 0 30px 0;
+        }
+
+        .error-message {
+            display: grid;
+            place-items: center;
+            font-family: sans-serif;
+            color: rgb(56, 56, 56);
+        }
+
+        .error-message p {
+            margin: 30px 0 0 0;
+            padding: 0;
+            font-size: 2em;
+            opacity: .7;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        a {
+            color: black;
+            font-family: sans-serif;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            opacity: .7;
+
+            text-align: center;
+
+            padding-bottom: 3px;
+            background:
+                linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0)
+                ),
+                linear-gradient(
+                to right,
+                rgb(245, 63, 255),
+                rgb(221, 255, 67),
+                rgb(83, 169, 255)
+            );
+            background-size: 100% 2px, 0 2px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 400ms;
+        }
+
+        a:hover {
+            background-size: 0 2px, 100% 2px;
+
+        }
+
+        @media (max-width: 500px) {
+            .error-message p {
+                font-size: 1.6em;
+            }
+        }
+    </style>
 </head>
 <body>
     <main>
+        <a href="#">
+            <i>Go to home</i>
+        </a>
+        <div class="error-message">
+            <p>
+                PAGE NOT FOUND
+            </p>
+        </div>
         <div class="envelope-button">
             <div class="envelope-top">
                 <div>
@@ -18,25 +271,26 @@
             <div>
                 <div>
                     <div class="envelope-left">
-
                     </div>
                     <div class="envelope-right">
-        
                     </div>
-
                     <div class="envelope-bottom">
-
                     </div>
                 </div>
             </div>
             <div class="envelope-content">
                 <div>
                     <h3>
-                       FAQs
+                        404
                     </h3>
                 </div>
             </div>
         </div>
     </main>
+    <script>
+        window.onload = () => {
+            document.querySelector('.envelope-content').classList.add('page-loaded');
+        }
+    </script>
 </body>
 </html>
