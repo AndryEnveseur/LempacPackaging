@@ -29,13 +29,20 @@ header:first-of-type {
     /* position: initial; */
 }
 
-.header-sticky-hidden {
+.header-sticky-hide {
     transform: translateY(-218.53px);
 }
 
 .header-sticky-displayed {
-
     transform: translateY(0px);
+}
+
+.header-sticky-opacity-0 {
+    opacity: 0;
+}
+
+.header-sticky-opacity-1 {
+    opacity: 1;
 }
 
 header nav {
