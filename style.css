@@ -21,7 +21,7 @@ header:first-of-type {
     top: 0;
     width: 100%;
     z-index: 999;
-    transition-duration: 400ms;
+    transition-duration: 300ms;
     transition-property: transform;
     opacity: 0;
 
