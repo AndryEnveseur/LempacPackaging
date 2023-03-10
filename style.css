@@ -13,36 +13,17 @@ body {
 header:first-of-type {
     /* background-color: red; */
     min-height: 218.53px;
+    z-index: 999;
     
 }
 
-.header-sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    transition-duration: 300ms;
+header:first-of-type > div {
     transition-property: transform;
-    opacity: 0;
+    transition-duration: 400ms;
+    z-index: 999;
 
-
-    /* position: initial; */
-}
-
-.header-sticky-hide {
-    transform: translateY(-218.53px);
-}
-
-.header-sticky-displayed {
-    transform: translateY(0px);
-}
-
-.header-sticky-opacity-0 {
-    opacity: 0;
-}
-
-.header-sticky-opacity-1 {
-    opacity: 1;
+    width: 100%;
+    top: 0;
 }
 
 header nav {

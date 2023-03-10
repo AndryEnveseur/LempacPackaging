@@ -1,31 +1,27 @@
-const header = document.querySelector('.header-sticky');
-const main = document.querySelector('main');
+const header = document.querySelector('header:first-of-type > div');
 const HEADER_HEIGHT = 218.53;
 
 window.onscroll = e => {
     let scrollingToUp = this.oldScroll > this.scrollY;
 
     if (scrollingToUp) {
-        if (this.scrollY >= HEADER_HEIGHT) {
-            header.classList.remove('header-sticky-hide');
-            header.classList.add('header-sticky-displayed');
+
+        if (this.scrollY > HEADER_HEIGHT) {
+
+            header.style.position = 'fixed';
+            header.style.transform = `translateY(${0}px)`;
+
+        } else if (this.scrollY <= 1) {
+
+            header.style.position = 'initial';
+
         }
 
-        if (this.scrollY <= 2) {
-            header.classList.remove('header-sticky-opacity-1');
-            header.classList.remove('header-sticky-displayed');
-            header.classList.add('header-sticky-hide');
-        }
-
-    //Scroll down
     } else {
-        header.classList.add('header-sticky-hide');
-        header.classList.remove('header-sticky-displayed');
 
-        if (this.scrollY >= HEADER_HEIGHT) {
-            header.classList.add('header-sticky-opacity-1');
+        if (this.scrollY > HEADER_HEIGHT) {
+            header.style.transform = `translateY(${-1 * HEADER_HEIGHT}px)`;
         }
-
 
     }
 
