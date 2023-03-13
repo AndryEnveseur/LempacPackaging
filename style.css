@@ -10,6 +10,12 @@ body {
     font-family: 'Assistant', sans-serif;
 }
 
+@media (max-width: 990px) {
+    body {
+        --header-top-height: 105.19px;
+    }
+}
+
 /* Header */
 
 header {
@@ -32,7 +38,7 @@ header > div {
 }
 
 header nav:first-of-type {
-    min-height: var(--header-top-height);
+    /* min-height: var(--header-top-height); */
     max-height: var(--header-top-height);
 }
 
@@ -89,6 +95,11 @@ input#hamburguer-menu + nav label {
         border-right: 1px solid rgb(218, 218, 218);
 
         min-width: 170px;
+    }
+
+    header nav:first-of-type img {
+        width: 60px;
+        height: auto;
     }
 
     header nav:last-of-type > div {

@@ -2,9 +2,12 @@
 const getPropertyValue = (element, propertyName) => window.getComputedStyle(element).getPropertyValue(propertyName);
 
 const header = document.querySelector('header > div');
-const HEADER_HEIGHT = parseFloat(getPropertyValue(document.querySelector('header'), 'min-height').replace('px', ''));
+const HEADER_HEIGHT = parseFloat(getPropertyValue(document.querySelector('header'), 'max-height').replace('px', ''));
 
-window.onscroll = () => {
+console.log(getComputedStyle(document.querySelector('body')).getPropertyValue('--header-top-height'));
+
+window.onscroll = (e) => {
+
     let scrollingToUp = this.oldScroll > this.scrollY;
 
     if (scrollingToUp) {
@@ -15,6 +18,7 @@ window.onscroll = () => {
             header.style.position = 'initial';
         }
     } else {
+
         if (this.scrollY > HEADER_HEIGHT) {
             header.style.transform = `translateY(${-1 * HEADER_HEIGHT}px)`;
         }
