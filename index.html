@@ -15,11 +15,17 @@
 <body>
     <header>
         <div>
+            <input 
+                type="checkbox" 
+                name="hamburguer-menu" 
+                id="hamburguer-menu" 
+                class="d-none"
+                onchange="restrictScrollY(this)"
+            >
             <nav class="container-fluid mb-0 pb-0">
                 <ul class="container d-flex justify-content-between pt-4 pb-4 align-items-center my-0">
                     <li class="list-unstyled">
-                        <input type="checkbox" name="hamburguer-menu" id="hamburguer-menu" class="d-none">
-                        <label for="hamburguer-menu">
+                        <label for="hamburguer-menu" onclick="document.querySelector('header nav:last-of-type').style.height = `${(window.innerHeight - 143.33)}px;`">
                             <i class="bi bi-list h2 text-dark"></i>
                         </label>
                     </li>
@@ -37,7 +43,7 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="navbar container-fluid p-0 navbar-expand-sm navbar-d mt-0">
+            <nav class="navbar container-fluid p-0 navbar-expand-sm navbar-d">
                 <div class="container d-flex justify-content-center align-items-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">

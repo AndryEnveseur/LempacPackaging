@@ -6,6 +6,7 @@ body {
 
     --background-color-header-footer: #f3f3f3;
     --header-height: 202.52px;
+    --header-top-height: 143.33px;
     font-family: 'Assistant', sans-serif;
 }
 
@@ -14,7 +15,7 @@ body {
 header {
     /* background-color: red; */
     z-index: 999;
-    min-height: var(--header-height);
+    max-height: var(--header-height);
 }
 
 header > div {
@@ -30,32 +31,86 @@ header > div {
     box-sizing: border-box;
 }
 
-input#hamburguer-menu:checked + label {
-    background-color: red;
+header nav:first-of-type {
+    min-height: var(--header-top-height);
+    max-height: var(--header-top-height);
 }
 
-input#hamburguer-menu + label {
+header nav:last-of-type {
+    margin-top: -5px; /* TEST */
+}
+
+input#hamburguer-menu + nav label {
+    cursor: pointer;
     pointer-events: none; 
     opacity: 0;
 }
 
 @media (max-width: 990px) {
-    input#hamburguer-menu + label {
+    input#hamburguer-menu + nav label {
         pointer-events: initial; 
         opacity: 1;
+        cursor: pointer;
     }
 
-    header nav:last-of-type {
+    input#hamburguer-menu:checked ~ nav:last-of-type {
+        transform: translateX(0vw);
+        transition: transform 500ms ease;
+
+        visibility: visible;
+    }
+
+    input#hamburguer-menu:not(:checked) ~ nav:last-of-type {
+        transform: translateX(-50vw);
+    }
+
+    /* input#hamburguer-menu:not(:checked) ~ nav:last-of-type {
+        transition: transform 500ms ease;
+    } */
+
+    input#hamburguer-menu ~ nav:last-of-type {
+        transition: visibility 500ms, transform 500ms ease;
+        visibility: hidden;
+
+        display: flex;
+        align-items: flex-start;
         position: absolute;
         left: 0;
-        top: 143.33px;
+
+        width: auto;
+        box-sizing: border-box;
+
+        margin-top: 0;
+
+        height: 100vh;
+        width: 50vw;
+
+        background-color: var(--background-color-header-footer);
+        border-right: 1px solid rgb(218, 218, 218);
+
+        min-width: 170px;
     }
 
     header nav:last-of-type > div {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
+        align-items: flex-start !important;
+
+        margin-top: 100px;
+    }
+
+    header nav:last-of-type > div ul {
+        display: flex;
+        flex-direction: column !important;
+
+        width: 100%;
+    }
+
+    main {
+        /* margin-top: -51.19px; */
     }
 }
+
 
 /* Header - End */
 
