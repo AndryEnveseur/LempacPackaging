@@ -44,3 +44,7 @@ window.addEventListener('resize', () => {
 /* If the hamburguer mobile menu is opened the user will not scroll vertically */
 const restrictScrollY = (e) => document.querySelector('body').style.overflowY = e.checked ? 'hidden' : 'auto';
 
+window.onunload = () => {
+    alert('xd')
+}
+
