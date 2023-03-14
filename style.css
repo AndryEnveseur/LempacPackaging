@@ -119,22 +119,26 @@ header .navbar-mobile-bg {
     position: absolute;
     transform: translateX(-100vw);
 
-    transition: 400ms background ease;
     box-sizing: border-box;
-}
-
-header .navbar-mobile-bg.translucid {
-    background-color: rgba(0, 0, 0, 0);
-    /* border: 1px solid blue; */
-
 }
 
 input#hamburguer-menu:checked ~ .navbar-mobile-bg {
     transform: translateX(0vw);
 }
 
+input#hamburguer-menu ~ .navbar-mobile-bg.translucid {
+    transition-property: background, transform;
+    transition-duration: 400ms, 0ms;
+    transition-timing-function: ease;
+    transition-delay: 0ms, 400ms;
+}
+
 input#hamburguer-menu:checked ~ .navbar-mobile-bg.translucid {
     background-color: rgba(0, 0, 0, .5);
+    transition-property: background, transform;
+    transition-duration: 400ms, 0ms;
+
+    transition-delay: 0s, 0s;
 }
 
 header .navbar-mobile-bg.functional {

@@ -39,6 +39,7 @@ const restrictScrollY = () => document.querySelector('body').classList.toggle('n
 const resizeHeightMenuMobile = () => document.querySelector('header .navbar-mobile').style.height = `${(window.innerHeight - HEADER_HEIGHT)}px;`;
 
 const closeHamburguerMenu = () => {
+    console.log('xd')
     const input = document.querySelector('input#hamburguer-menu');
     const currentInputState = input.checked;
 
