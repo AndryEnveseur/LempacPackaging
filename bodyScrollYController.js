@@ -1,0 +1,1 @@
+const restrictScrollY = () => document.querySelector('body').classList.toggle('noscroll'); 
