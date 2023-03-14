@@ -1,10 +1,9 @@
-const getPropertyValue = (element, propertyName) => window.getComputedStyle(element).getPropertyValue(propertyName);
 
 const header = document.querySelector('header > div');
-const HEADER_HEIGHT = parseFloat(getPropertyValue(document.querySelector('header'), 'max-height').replace('px', ''));
 
 /* Event invoked when the user scrolling window */
 window.onscroll = (e) => {
+    const HEADER_HEIGHT = parseFloat(getPropertyValue(document.querySelector('body'), '--header-height').replace('px', ''));
 
     //If the hamburguer menu is displayed.
     if (input.checked) {
