@@ -50,6 +50,7 @@ input#hamburguer-menu + nav label {
 
 input#hamburguer-menu + nav label i {
     position: absolute;
+    margin-left: 25px;
 }
 
 input#hamburguer-menu:not(:checked) + nav label i.bi-x {
@@ -174,7 +175,6 @@ header .navbar-mobile-bg.functional {
 
     input#hamburguer-menu ~ .navbar-mobile {
         display: initial;
-
         
         transform: translateX(-50vw);
     }
