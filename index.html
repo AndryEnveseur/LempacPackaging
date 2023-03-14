@@ -25,7 +25,11 @@
             <nav class="container-fluid mb-0 pb-0">
                 <ul class="container d-flex justify-content-between pt-4 pb-4 align-items-center my-0">
                     <li class="list-unstyled">
-                        <label for="hamburguer-menu" onclick="document.querySelector('header nav:last-of-type').style.height = `${(window.innerHeight - 143.33)}px;`">
+                        <label 
+                            for="hamburguer-menu" 
+                            onclick="
+                                resizeHeightMenuMobile();
+                            ">
                             <i class="bi bi-list h2 text-dark"></i>
                         </label>
                     </li>
@@ -57,6 +61,24 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pt-2 px-3 pb-3 text-uppercase text-dark h6" style="font-weight: 400; letter-spacing: 2px;" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="navbar-mobile">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <ul class="navbar-nav mt-5">
+                        <li class="nav-item">
+                            <a class="nav-link pt-3 px-3 pb-3 text-uppercase text-dark h6" style="font-weight: 400; letter-spacing: 2px;" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pt-3 px-3 pb-3 text-uppercase text-dark h6" style="font-weight: 400; letter-spacing: 2px;" href="#">Packaging</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pt-3 px-3 pb-3 text-uppercase text-dark h6" style="font-weight: 400; letter-spacing: 2px;" href="#">Labels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pt-3 px-3 pb-0 text-uppercase text-dark h6" style="font-weight: 400; letter-spacing: 2px;" href="#">Contact Us</a>
                         </li>
                     </ul>
                 </div>
