@@ -10,10 +10,13 @@ body {
     font-family: 'Assistant', sans-serif;
 }
 
+.noscroll {
+    overflow-y: hidden;
+}
+
 @media (max-width: 990px) {
     body {
         --header-height: 106.19px;
-        /* --header-top-height: 105.19px; */
     }
 }
 
@@ -39,18 +42,55 @@ header > div {
     box-sizing: border-box;
 }
 
-header nav:first-of-type {
-    /* max-height: var(--header-top-height); */
-}
-
-/* header nav:last-of-type {
-    margin-top: -5px;
-} */
-
 input#hamburguer-menu + nav label {
     cursor: pointer;
     pointer-events: none; 
     opacity: 0;
+}
+
+input#hamburguer-menu + nav label i {
+    position: absolute;
+}
+
+input#hamburguer-menu:not(:checked) + nav label i.bi-x {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+
+    transform: scale3d(.8, .8, .8);
+}
+
+input#hamburguer-menu:checked + nav label i.bi-x {
+    opacity: 1;
+    transition-property: opacity, transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 100ms;
+
+    transform: scale3d(1, 1, 1);
+}
+
+input#hamburguer-menu:not(:checked) + nav label i.bi-list {
+    opacity: 1;
+    transition-property: opacity, transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 100ms;
+
+    transform: scale3d(1, 1, 1);
+}
+
+input#hamburguer-menu:checked + nav label i.bi-list {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+
+    transform: scale3d(.8, .8, .8);
+
 }
 
 .navbar-mobile {
