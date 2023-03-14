@@ -20,9 +20,6 @@
                 name="hamburguer-menu" 
                 id="hamburguer-menu" 
                 class="d-none"
-                onchange="
-                    // restrictScrollY();
-                "
             >
             <nav class="container-fluid mb-0 pb-0">
                 <ul class="container d-flex justify-content-between pt-4 pb-4 align-items-center my-0">
@@ -88,8 +85,8 @@
                     </ul>
                 </div>
             </nav>
-            <div class="translucid bg"></div>
-            <div class="functional bg"></div>
+            <div class="navbar-mobile-bg translucid"></div>
+            <div class="navbar-mobile-bg functional" onclick="closeHamburguerMenu()"></div>
         </div>
     </header>
     <main>
@@ -99,7 +96,7 @@
                     <h1>
                         Custom Branded Packaging
                     </h1>
-                        <p class="text-dark m-5 mx-0">
+                    <p class="text-dark m-5 mx-0">
                         From cosmetics to large UK retailers, Lempak supplies exceptional labels and packaging using the latest printing technology. Our design services support your business every step of the way, from concept to sample and beyond
                     </p>
                 </section>

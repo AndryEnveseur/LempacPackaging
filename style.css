@@ -90,7 +90,6 @@ input#hamburguer-menu:checked + nav label i.bi-list {
     transition-delay: 0ms;
 
     transform: scale3d(.8, .8, .8);
-
 }
 
 .navbar-mobile {
@@ -106,10 +105,40 @@ input#hamburguer-menu:checked + nav label i.bi-list {
     min-width: 170px;
 
     transform: translateX(-50vw);
+    z-index: 999;
 }
 
 .navbar-mobile ul {
     width: 100%;
+}
+
+header .navbar-mobile-bg {
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    transform: translateX(-100vw);
+
+    transition: 400ms background ease;
+    box-sizing: border-box;
+}
+
+header .navbar-mobile-bg.translucid {
+    background-color: rgba(0, 0, 0, 0);
+    /* border: 1px solid blue; */
+
+}
+
+input#hamburguer-menu:checked ~ .navbar-mobile-bg {
+    transform: translateX(0vw);
+}
+
+input#hamburguer-menu:checked ~ .navbar-mobile-bg.translucid {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+header .navbar-mobile-bg.functional {
+    cursor: pointer;
 }
 
 @media (max-width: 990px) {
@@ -139,6 +168,12 @@ input#hamburguer-menu:checked + nav label i.bi-list {
     }
 }
 
+@media (min-width: 990px) {
+    header .navbar-mobile-bg.translucid,
+    header .navbar-mobile-bg.functional {
+        display: none;;
+    }
+}
 
 /* Header - End */
 
